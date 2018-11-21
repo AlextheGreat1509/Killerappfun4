@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="hibernate.cfg.xml/Hibernate" uuid="78307e0c-889c-4c75-bd85-8af9fe5b90fb">
+      <database-info product="Microsoft SQL Server" version="12.00.1000" jdbc-version="4.2" driver-name="Microsoft JDBC Driver 7.0 for SQL Server" driver-version="7.0.0.0" family="AZURE" exact-version="12.0.100">
+        <extra-name-characters>$#@</extra-name-characters>
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <user-name>EquationAdmin@equationsolver</user-name>
+      <introspection-schemas>equationsolver:dbo|master:</introspection-schemas>
+    </data-source>
+  </component>
+</project>
