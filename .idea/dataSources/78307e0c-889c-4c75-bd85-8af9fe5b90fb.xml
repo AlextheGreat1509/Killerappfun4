@@ -17,7 +17,7 @@
     </database>
     <schema id="4" parent="2" name="dbo">
       <ObjectId>1</ObjectId>
-      <IntrospectionTimestamp>2018-11-21.10:11:09.063</IntrospectionTimestamp>
+      <IntrospectionTimestamp>2018-12-10.11:50:06.053</IntrospectionTimestamp>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -59,81 +59,164 @@
     <schema id="16" parent="2" name="db_denydatawriter">
       <ObjectId>16393</ObjectId>
     </schema>
-    <table id="17" parent="4" name="EntryList">
-      <ObjectId>98099390</ObjectId>
-      <CreatedTimestamp>2018-11-21.10:07:54.690</CreatedTimestamp>
-      <ModifiedTimestamp>2018-11-21.10:07:54.727</ModifiedTimestamp>
+    <schema id="17" parent="3" name="dbo">
+      <ObjectId>1</ObjectId>
+      <Current>1</Current>
+    </schema>
+    <schema id="18" parent="3" name="guest">
+      <ObjectId>2</ObjectId>
+    </schema>
+    <schema id="19" parent="3" name="INFORMATION_SCHEMA">
+      <ObjectId>3</ObjectId>
+    </schema>
+    <schema id="20" parent="3" name="sys">
+      <ObjectId>4</ObjectId>
+    </schema>
+    <schema id="21" parent="3" name="db_owner">
+      <ObjectId>16384</ObjectId>
+    </schema>
+    <schema id="22" parent="3" name="db_accessadmin">
+      <ObjectId>16385</ObjectId>
+    </schema>
+    <schema id="23" parent="3" name="db_securityadmin">
+      <ObjectId>16386</ObjectId>
+    </schema>
+    <schema id="24" parent="3" name="db_ddladmin">
+      <ObjectId>16387</ObjectId>
+    </schema>
+    <schema id="25" parent="3" name="db_backupoperator">
+      <ObjectId>16389</ObjectId>
+    </schema>
+    <schema id="26" parent="3" name="db_datareader">
+      <ObjectId>16390</ObjectId>
+    </schema>
+    <schema id="27" parent="3" name="db_datawriter">
+      <ObjectId>16391</ObjectId>
+    </schema>
+    <schema id="28" parent="3" name="db_denydatareader">
+      <ObjectId>16392</ObjectId>
+    </schema>
+    <schema id="29" parent="3" name="db_denydatawriter">
+      <ObjectId>16393</ObjectId>
+    </schema>
+    <table id="30" parent="4" name="Actor">
+      <ObjectId>891150220</ObjectId>
+      <CreatedTimestamp>2018-12-05.13:59:03.713</CreatedTimestamp>
+      <ModifiedTimestamp>2018-12-07.19:16:52.163</ModifiedTimestamp>
     </table>
-    <table id="18" parent="4" name="Equation">
+    <table id="31" parent="4" name="Equation">
       <ObjectId>1909581841</ObjectId>
       <CreatedTimestamp>2018-10-16.10:37:29.850</CreatedTimestamp>
       <ModifiedTimestamp>2018-10-16.10:37:29.890</ModifiedTimestamp>
     </table>
-    <table id="19" parent="4" name="ListEntry">
-      <ObjectId>130099504</ObjectId>
-      <CreatedTimestamp>2018-11-21.10:07:54.710</CreatedTimestamp>
-      <ModifiedTimestamp>2018-11-21.10:07:54.727</ModifiedTimestamp>
+    <table id="32" parent="4" name="Genre">
+      <ObjectId>923150334</ObjectId>
+      <CreatedTimestamp>2018-12-05.13:59:03.740</CreatedTimestamp>
+      <ModifiedTimestamp>2018-12-05.13:59:04.027</ModifiedTimestamp>
     </table>
-    <table id="20" parent="4" name="Solution">
+    <table id="33" parent="4" name="Genre_Genre">
+      <ObjectId>955150448</ObjectId>
+      <CreatedTimestamp>2018-12-05.13:59:03.773</CreatedTimestamp>
+      <ModifiedTimestamp>2018-12-05.13:59:03.970</ModifiedTimestamp>
+    </table>
+    <table id="34" parent="4" name="Movie">
+      <ObjectId>971150505</ObjectId>
+      <CreatedTimestamp>2018-12-05.13:59:03.800</CreatedTimestamp>
+      <ModifiedTimestamp>2018-12-07.18:45:24.727</ModifiedTimestamp>
+    </table>
+    <table id="35" parent="4" name="Movie_Actor">
+      <ObjectId>1003150619</ObjectId>
+      <CreatedTimestamp>2018-12-05.13:59:03.827</CreatedTimestamp>
+      <ModifiedTimestamp>2018-12-05.13:59:04.007</ModifiedTimestamp>
+    </table>
+    <table id="36" parent="4" name="Movie_Genre">
+      <ObjectId>1019150676</ObjectId>
+      <CreatedTimestamp>2018-12-05.13:59:03.850</CreatedTimestamp>
+      <ModifiedTimestamp>2018-12-05.13:59:04.053</ModifiedTimestamp>
+    </table>
+    <table id="37" parent="4" name="Solution">
       <ObjectId>1941581955</ObjectId>
       <CreatedTimestamp>2018-10-16.10:37:29.870</CreatedTimestamp>
       <ModifiedTimestamp>2018-10-16.10:37:29.890</ModifiedTimestamp>
     </table>
-    <column id="21" parent="17" name="List_ID">
+    <table id="38" parent="4" name="WordEntry">
+      <ObjectId>7671075</ObjectId>
+      <CreatedTimestamp>2018-12-10.11:49:44.207</CreatedTimestamp>
+      <ModifiedTimestamp>2018-12-10.11:49:44.310</ModifiedTimestamp>
+    </table>
+    <table id="39" parent="4" name="WordList">
+      <ObjectId>39671189</ObjectId>
+      <CreatedTimestamp>2018-12-10.11:49:44.250</CreatedTimestamp>
+      <ModifiedTimestamp>2018-12-10.11:49:44.340</ModifiedTimestamp>
+    </table>
+    <table id="40" parent="4" name="WordList_WordEntry">
+      <ObjectId>71671303</ObjectId>
+      <CreatedTimestamp>2018-12-10.11:49:44.270</CreatedTimestamp>
+      <ModifiedTimestamp>2018-12-10.11:49:44.340</ModifiedTimestamp>
+    </table>
+    <column id="41" parent="30" name="Actor_ID">
       <Position>1</Position>
       <SequenceIdentity>1</SequenceIdentity>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="22" parent="17" name="listEntry_ListEntry_ID">
-      <Position>2</Position>
-      <DataType>int|0s</DataType>
-    </column>
-    <index id="23" parent="17" name="PK__EntryLis__267E8EE35FF555D8">
-      <Position>1</Position>
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>List_ID</ColNames>
-      <Clustering>1</Clustering>
-      <Unique>1</Unique>
-    </index>
-    <key id="24" parent="17" name="PK__EntryLis__267E8EE35FF555D8">
-      <ObjectId>114099447</ObjectId>
-      <NameSurrogate>1</NameSurrogate>
-      <CreatedTimestamp>2018-11-21.10:07:54.690</CreatedTimestamp>
-      <ModifiedTimestamp>2018-11-21.10:07:54.690</ModifiedTimestamp>
-      <ColNames>List_ID</ColNames>
-      <UnderlyingIndexName>PK__EntryLis__267E8EE35FF555D8</UnderlyingIndexName>
-      <Primary>1</Primary>
-    </key>
-    <foreign-key id="25" parent="17" name="FK_qg82qg1yj6acddp7lmeblliqr">
-      <ObjectId>162099618</ObjectId>
-      <CreatedTimestamp>2018-11-21.10:07:54.727</CreatedTimestamp>
-      <ModifiedTimestamp>2018-11-21.10:07:54.727</ModifiedTimestamp>
-      <ColNames>listEntry_ListEntry_ID</ColNames>
-      <RefTableId>130099504</RefTableId>
-      <RefSchemaName>dbo</RefSchemaName>
-      <RefTableName>ListEntry</RefTableName>
-      <RefKeyName>PK__ListEntr__8F56991FE2C2CA01</RefKeyName>
-      <RefColNames>ListEntry_ID</RefColNames>
-    </foreign-key>
-    <column id="26" parent="18" name="Equation_ID">
-      <Position>1</Position>
-      <SequenceIdentity>1</SequenceIdentity>
-      <DataType>int|0s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="27" parent="18" name="equation">
+    <column id="42" parent="30" name="name">
       <Position>2</Position>
       <DataType>varchar(255 char)|0s</DataType>
     </column>
-    <index id="28" parent="18" name="PK__Equation__B2B6432482E6742D">
+    <column id="43" parent="30" name="movies_Movie_ID">
+      <Position>3</Position>
+      <DataType>int|0s</DataType>
+    </column>
+    <column id="44" parent="30" name="BgImage">
+      <Position>4</Position>
+      <DataType>varchar(255 char)|0s</DataType>
+    </column>
+    <index id="45" parent="30" name="PK__Actor__E57403ED2619CBE3">
+      <Position>1</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>Actor_ID</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="46" parent="30" name="PK__Actor__E57403ED2619CBE3">
+      <ObjectId>907150277</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2018-12-05.13:59:03.713</CreatedTimestamp>
+      <ModifiedTimestamp>2018-12-05.13:59:03.713</ModifiedTimestamp>
+      <ColNames>Actor_ID</ColNames>
+      <UnderlyingIndexName>PK__Actor__E57403ED2619CBE3</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="47" parent="30" name="FK_4yfr0efni6mnkl6veq918q3xb">
+      <ObjectId>1035150733</ObjectId>
+      <CreatedTimestamp>2018-12-05.13:59:03.907</CreatedTimestamp>
+      <ModifiedTimestamp>2018-12-05.13:59:03.907</ModifiedTimestamp>
+      <ColNames>movies_Movie_ID</ColNames>
+      <RefTableId>971150505</RefTableId>
+      <RefSchemaName>dbo</RefSchemaName>
+      <RefTableName>Movie</RefTableName>
+      <RefKeyName>PK__Movie__7A880405504EDA99</RefKeyName>
+      <RefColNames>Movie_ID</RefColNames>
+    </foreign-key>
+    <column id="48" parent="31" name="Equation_ID">
+      <Position>1</Position>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="49" parent="31" name="equation">
+      <Position>2</Position>
+      <DataType>varchar(255 char)|0s</DataType>
+    </column>
+    <index id="50" parent="31" name="PK__Equation__B2B6432482E6742D">
       <Position>1</Position>
       <NameSurrogate>1</NameSurrogate>
       <ColNames>Equation_ID</ColNames>
       <Clustering>1</Clustering>
       <Unique>1</Unique>
     </index>
-    <key id="29" parent="18" name="PK__Equation__B2B6432482E6742D">
+    <key id="51" parent="31" name="PK__Equation__B2B6432482E6742D">
       <ObjectId>1925581898</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <CreatedTimestamp>2018-10-16.10:37:29.850</CreatedTimestamp>
@@ -142,58 +225,188 @@
       <UnderlyingIndexName>PK__Equation__B2B6432482E6742D</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="30" parent="19" name="ListEntry_ID">
+    <column id="52" parent="32" name="Genre_ID">
       <Position>1</Position>
       <SequenceIdentity>1</SequenceIdentity>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="31" parent="19" name="problem">
+    <column id="53" parent="32" name="name">
       <Position>2</Position>
       <DataType>varchar(255 char)|0s</DataType>
     </column>
-    <column id="32" parent="19" name="solution">
-      <Position>3</Position>
-      <DataType>varchar(255 char)|0s</DataType>
-    </column>
-    <index id="33" parent="19" name="PK__ListEntr__8F56991FE2C2CA01">
+    <index id="54" parent="32" name="PK__Genre__964A2006CAF325DB">
       <Position>1</Position>
       <NameSurrogate>1</NameSurrogate>
-      <ColNames>ListEntry_ID</ColNames>
+      <ColNames>Genre_ID</ColNames>
       <Clustering>1</Clustering>
       <Unique>1</Unique>
     </index>
-    <key id="34" parent="19" name="PK__ListEntr__8F56991FE2C2CA01">
-      <ObjectId>146099561</ObjectId>
+    <key id="55" parent="32" name="PK__Genre__964A2006CAF325DB">
+      <ObjectId>939150391</ObjectId>
       <NameSurrogate>1</NameSurrogate>
-      <CreatedTimestamp>2018-11-21.10:07:54.710</CreatedTimestamp>
-      <ModifiedTimestamp>2018-11-21.10:07:54.710</ModifiedTimestamp>
-      <ColNames>ListEntry_ID</ColNames>
-      <UnderlyingIndexName>PK__ListEntr__8F56991FE2C2CA01</UnderlyingIndexName>
+      <CreatedTimestamp>2018-12-05.13:59:03.740</CreatedTimestamp>
+      <ModifiedTimestamp>2018-12-05.13:59:03.740</ModifiedTimestamp>
+      <ColNames>Genre_ID</ColNames>
+      <UnderlyingIndexName>PK__Genre__964A2006CAF325DB</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <column id="35" parent="20" name="Solution_ID">
+    <column id="56" parent="33" name="Genre_Genre_ID">
+      <Position>1</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="57" parent="33" name="Movie_Genre_ID">
+      <Position>2</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <foreign-key id="58" parent="33" name="FK_6ves9tjvoyq17s5wrc93m37br">
+      <ObjectId>1067150847</ObjectId>
+      <CreatedTimestamp>2018-12-05.13:59:03.970</CreatedTimestamp>
+      <ModifiedTimestamp>2018-12-05.13:59:03.970</ModifiedTimestamp>
+      <ColNames>Genre_Genre_ID</ColNames>
+      <RefTableId>923150334</RefTableId>
+      <RefSchemaName>dbo</RefSchemaName>
+      <RefTableName>Genre</RefTableName>
+      <RefKeyName>PK__Genre__964A2006CAF325DB</RefKeyName>
+      <RefColNames>Genre_ID</RefColNames>
+    </foreign-key>
+    <foreign-key id="59" parent="33" name="FK_74gv07vdyd4ymvwe0vwhjbjam">
+      <ObjectId>1051150790</ObjectId>
+      <CreatedTimestamp>2018-12-05.13:59:03.953</CreatedTimestamp>
+      <ModifiedTimestamp>2018-12-05.13:59:03.953</ModifiedTimestamp>
+      <ColNames>Movie_Genre_ID</ColNames>
+      <RefTableId>923150334</RefTableId>
+      <RefSchemaName>dbo</RefSchemaName>
+      <RefTableName>Genre</RefTableName>
+      <RefKeyName>PK__Genre__964A2006CAF325DB</RefKeyName>
+      <RefColNames>Genre_ID</RefColNames>
+    </foreign-key>
+    <column id="60" parent="34" name="Movie_ID">
       <Position>1</Position>
       <SequenceIdentity>1</SequenceIdentity>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="36" parent="20" name="solution">
+    <column id="61" parent="34" name="Description">
       <Position>2</Position>
       <DataType>varchar(255 char)|0s</DataType>
     </column>
-    <column id="37" parent="20" name="equation_Equation_ID">
+    <column id="62" parent="34" name="Duration">
+      <Position>3</Position>
+      <DataType>float|0s</DataType>
+    </column>
+    <column id="63" parent="34" name="Name">
+      <Position>4</Position>
+      <DataType>varchar(255 char)|0s</DataType>
+    </column>
+    <column id="64" parent="34" name="BgImage">
+      <Position>5</Position>
+      <DataType>varchar(255 char)|0s</DataType>
+    </column>
+    <index id="65" parent="34" name="PK__Movie__7A880405504EDA99">
+      <Position>1</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>Movie_ID</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="66" parent="34" name="PK__Movie__7A880405504EDA99">
+      <ObjectId>987150562</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2018-12-05.13:59:03.800</CreatedTimestamp>
+      <ModifiedTimestamp>2018-12-05.13:59:03.800</ModifiedTimestamp>
+      <ColNames>Movie_ID</ColNames>
+      <UnderlyingIndexName>PK__Movie__7A880405504EDA99</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="67" parent="35" name="Movie_Movie_ID">
+      <Position>1</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="68" parent="35" name="actors_Actor_ID">
+      <Position>2</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <foreign-key id="69" parent="35" name="FK_njv93ni2jyyqo61emg741ybsw">
+      <ObjectId>1099150961</ObjectId>
+      <CreatedTimestamp>2018-12-05.13:59:04.007</CreatedTimestamp>
+      <ModifiedTimestamp>2018-12-05.13:59:04.007</ModifiedTimestamp>
+      <ColNames>Movie_Movie_ID</ColNames>
+      <RefTableId>971150505</RefTableId>
+      <RefSchemaName>dbo</RefSchemaName>
+      <RefTableName>Movie</RefTableName>
+      <RefKeyName>PK__Movie__7A880405504EDA99</RefKeyName>
+      <RefColNames>Movie_ID</RefColNames>
+    </foreign-key>
+    <foreign-key id="70" parent="35" name="FK_b9w4yt6d40qk8hjcwrj5767kg">
+      <ObjectId>1083150904</ObjectId>
+      <CreatedTimestamp>2018-12-05.13:59:03.990</CreatedTimestamp>
+      <ModifiedTimestamp>2018-12-05.13:59:03.990</ModifiedTimestamp>
+      <ColNames>actors_Actor_ID</ColNames>
+      <RefTableId>891150220</RefTableId>
+      <RefSchemaName>dbo</RefSchemaName>
+      <RefTableName>Actor</RefTableName>
+      <RefKeyName>PK__Actor__E57403ED2619CBE3</RefKeyName>
+      <RefColNames>Actor_ID</RefColNames>
+    </foreign-key>
+    <column id="71" parent="36" name="Movie_Movie_ID">
+      <Position>1</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="72" parent="36" name="genres_Genre_ID">
+      <Position>2</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <foreign-key id="73" parent="36" name="FK_p428g49c7ylss19x89wv8jled">
+      <ObjectId>1131151075</ObjectId>
+      <CreatedTimestamp>2018-12-05.13:59:04.053</CreatedTimestamp>
+      <ModifiedTimestamp>2018-12-05.13:59:04.053</ModifiedTimestamp>
+      <ColNames>Movie_Movie_ID</ColNames>
+      <RefTableId>971150505</RefTableId>
+      <RefSchemaName>dbo</RefSchemaName>
+      <RefTableName>Movie</RefTableName>
+      <RefKeyName>PK__Movie__7A880405504EDA99</RefKeyName>
+      <RefColNames>Movie_ID</RefColNames>
+    </foreign-key>
+    <foreign-key id="74" parent="36" name="FK_e1b2m5dh2wl3oa0t3uunnro0d">
+      <ObjectId>1115151018</ObjectId>
+      <CreatedTimestamp>2018-12-05.13:59:04.023</CreatedTimestamp>
+      <ModifiedTimestamp>2018-12-05.13:59:04.023</ModifiedTimestamp>
+      <ColNames>genres_Genre_ID</ColNames>
+      <RefTableId>923150334</RefTableId>
+      <RefSchemaName>dbo</RefSchemaName>
+      <RefTableName>Genre</RefTableName>
+      <RefKeyName>PK__Genre__964A2006CAF325DB</RefKeyName>
+      <RefColNames>Genre_ID</RefColNames>
+    </foreign-key>
+    <column id="75" parent="37" name="Solution_ID">
+      <Position>1</Position>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="76" parent="37" name="solution">
+      <Position>2</Position>
+      <DataType>varchar(255 char)|0s</DataType>
+    </column>
+    <column id="77" parent="37" name="equation_Equation_ID">
       <Position>3</Position>
       <DataType>int|0s</DataType>
     </column>
-    <index id="38" parent="20" name="PK__Solution__DD9D56073A6E226B">
+    <index id="78" parent="37" name="PK__Solution__DD9D56073A6E226B">
       <Position>1</Position>
       <NameSurrogate>1</NameSurrogate>
       <ColNames>Solution_ID</ColNames>
       <Clustering>1</Clustering>
       <Unique>1</Unique>
     </index>
-    <key id="39" parent="20" name="PK__Solution__DD9D56073A6E226B">
+    <key id="79" parent="37" name="PK__Solution__DD9D56073A6E226B">
       <ObjectId>1957582012</ObjectId>
       <NameSurrogate>1</NameSurrogate>
       <CreatedTimestamp>2018-10-16.10:37:29.870</CreatedTimestamp>
@@ -202,7 +415,7 @@
       <UnderlyingIndexName>PK__Solution__DD9D56073A6E226B</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="40" parent="20" name="FK_b382emn0ake9nhst7bqs77lrs">
+    <foreign-key id="80" parent="37" name="FK_b382emn0ake9nhst7bqs77lrs">
       <ObjectId>1973582069</ObjectId>
       <CreatedTimestamp>2018-10-16.10:37:29.890</CreatedTimestamp>
       <ModifiedTimestamp>2018-10-16.10:37:29.890</ModifiedTimestamp>
@@ -212,6 +425,102 @@
       <RefTableName>Equation</RefTableName>
       <RefKeyName>PK__Equation__B2B6432482E6742D</RefKeyName>
       <RefColNames>Equation_ID</RefColNames>
+    </foreign-key>
+    <column id="81" parent="38" name="WordEntry_ID">
+      <Position>1</Position>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="82" parent="38" name="problem">
+      <Position>2</Position>
+      <DataType>varchar(255 char)|0s</DataType>
+    </column>
+    <column id="83" parent="38" name="translation">
+      <Position>3</Position>
+      <DataType>varchar(255 char)|0s</DataType>
+    </column>
+    <index id="84" parent="38" name="PK__WordEntr__13AD9AB686E3FFF1">
+      <Position>1</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>WordEntry_ID</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="85" parent="38" name="PK__WordEntr__13AD9AB686E3FFF1">
+      <ObjectId>23671132</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2018-12-10.11:49:44.210</CreatedTimestamp>
+      <ModifiedTimestamp>2018-12-10.11:49:44.210</ModifiedTimestamp>
+      <ColNames>WordEntry_ID</ColNames>
+      <UnderlyingIndexName>PK__WordEntr__13AD9AB686E3FFF1</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="86" parent="39" name="WordList_ID">
+      <Position>1</Position>
+      <SequenceIdentity>1</SequenceIdentity>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="87" parent="39" name="PK__WordList__BF8FD221175582E0">
+      <Position>1</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>WordList_ID</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="88" parent="39" name="PK__WordList__BF8FD221175582E0">
+      <ObjectId>55671246</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2018-12-10.11:49:44.250</CreatedTimestamp>
+      <ModifiedTimestamp>2018-12-10.11:49:44.250</ModifiedTimestamp>
+      <ColNames>WordList_ID</ColNames>
+      <UnderlyingIndexName>PK__WordList__BF8FD221175582E0</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="89" parent="40" name="WordList_WordList_ID">
+      <Position>1</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="90" parent="40" name="listEntries_WordEntry_ID">
+      <Position>2</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="91" parent="40" name="UK_72c5q4d4g7apu1l3a6hdxnfx">
+      <Position>2</Position>
+      <ColNames>listEntries_WordEntry_ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="92" parent="40" name="UK_72c5q4d4g7apu1l3a6hdxnfx">
+      <ObjectId>87671360</ObjectId>
+      <CreatedTimestamp>2018-12-10.11:49:44.290</CreatedTimestamp>
+      <ModifiedTimestamp>2018-12-10.11:49:44.290</ModifiedTimestamp>
+      <ColNames>listEntries_WordEntry_ID</ColNames>
+      <UnderlyingIndexName>UK_72c5q4d4g7apu1l3a6hdxnfx</UnderlyingIndexName>
+    </key>
+    <foreign-key id="93" parent="40" name="FK_kiv9p1p8c2wm2583jpakofocs">
+      <ObjectId>119671474</ObjectId>
+      <CreatedTimestamp>2018-12-10.11:49:44.340</CreatedTimestamp>
+      <ModifiedTimestamp>2018-12-10.11:49:44.340</ModifiedTimestamp>
+      <ColNames>WordList_WordList_ID</ColNames>
+      <RefTableId>39671189</RefTableId>
+      <RefSchemaName>dbo</RefSchemaName>
+      <RefTableName>WordList</RefTableName>
+      <RefKeyName>PK__WordList__BF8FD221175582E0</RefKeyName>
+      <RefColNames>WordList_ID</RefColNames>
+    </foreign-key>
+    <foreign-key id="94" parent="40" name="FK_72c5q4d4g7apu1l3a6hdxnfx">
+      <ObjectId>103671417</ObjectId>
+      <CreatedTimestamp>2018-12-10.11:49:44.310</CreatedTimestamp>
+      <ModifiedTimestamp>2018-12-10.11:49:44.310</ModifiedTimestamp>
+      <ColNames>listEntries_WordEntry_ID</ColNames>
+      <RefTableId>7671075</RefTableId>
+      <RefSchemaName>dbo</RefSchemaName>
+      <RefTableName>WordEntry</RefTableName>
+      <RefKeyName>PK__WordEntr__13AD9AB686E3FFF1</RefKeyName>
+      <RefColNames>WordEntry_ID</RefColNames>
     </foreign-key>
   </database-model>
 </dataSource>

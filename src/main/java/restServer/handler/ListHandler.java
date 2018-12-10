@@ -1,29 +1,50 @@
 package restServer.handler;
 
-import dbal.repository.EntryListRepository;
-import dbal.repository.ListEntryRepository;
-import models.EntryList;
-import models.ListEntry;
+import dbal.repository.WordListRepository;
+import dbal.repository.WordEntryRepository;
+import models.WordList;
+import models.WordEntry;
+import org.hibernate.Session;
+import restServer.reply.Reply;
+import restServer.reply.Status;
 
+import java.beans.Transient;
 import java.util.ArrayList;
 import java.util.List;
 
 public class ListHandler {
 
-    EntryListRepository entryListRepository = new EntryListRepository();
-    ListEntryRepository listEntryRepository = new ListEntryRepository();
+    private WordListRepository wordListRepository = new WordListRepository();
+    private WordEntryRepository wordEntryRepository = new WordEntryRepository();
 
-    public void SubmitEntry(String problem, String solution) {
-        EntryList entryList = new EntryList();
-        ListEntry listEntry = new ListEntry();
-        listEntry.setProblem(problem);
-        listEntry.setSolution(solution);
-        listEntry.setEntryList(entryList);
-        List<ListEntry> listEntries = new ArrayList<>();
-        listEntries.add(listEntry);
-        entryList.setListEntries(listEntries);
+    public void SubmitEntry(List<String> problemWords, List<String> translationWords) {
 
-        entryListRepository.save(entryList);
-        listEntryRepository.save(listEntry);
+        WordList wordList = new WordList();
+        List<WordEntry> listEntries = new ArrayList<>();
+        for (int i = 0; i < problemWords.size(); i++){
+            if(!problemWords.get(i).trim().equals("") && !problemWords.get(i).isEmpty()) {
+                WordEntry wordEntry = new WordEntry();
+                wordEntry.setProblem(problemWords.get(i));
+                wordEntry.setTranslation(translationWords.get(i));
+                listEntries.add(wordEntry);
+            }
+        }
+        wordList.setListEntries(listEntries);
+
+        for (WordEntry entry: listEntries) {
+            wordEntryRepository.save(entry);
+        }
+        wordListRepository.save(wordList);
+    }
+
+    public List<WordList> GetLists() {
+        Session session = wordListRepository.openSession();
+        List queryResult = session.createCriteria(WordList.class).list();
+        ArrayList<WordList> resultList = new ArrayList<>();
+        for (Object result : queryResult) {
+            WordList wordList = (WordList) result;
+            resultList.add(wordList);
+        }
+        return resultList;
     }
 }

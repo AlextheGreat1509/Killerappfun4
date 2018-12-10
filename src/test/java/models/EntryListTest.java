@@ -9,21 +9,21 @@ import java.util.List;
 
 public class EntryListTest {
 
-    private EntryList entryList;
+    private WordList wordList;
 
     @Before
     public void setUp() {
-        entryList = new EntryList();
+        wordList = new WordList();
     }
 
     @Test
     public void addEntry() {
-        ListEntry listEntry = new ListEntry();
-        List<ListEntry> listEntries = new ArrayList<>();
-        entryList.setListEntries(listEntries);
-        int beforeSize = entryList.getListEntries().size();
-        listEntries.add(listEntry);
-        entryList.setListEntries(listEntries);
-        Assert.assertEquals(entryList.getListEntries().size(), beforeSize + 1);
+        WordEntry wordEntry = new WordEntry();
+        List<WordEntry> listEntries = new ArrayList<>();
+        wordList.setListEntries(listEntries);
+        int beforeSize = wordList.getListEntries().size();
+        listEntries.add(wordEntry);
+        wordList.setListEntries(listEntries);
+        Assert.assertEquals(wordList.getListEntries().size(), beforeSize + 1);
     }
 }

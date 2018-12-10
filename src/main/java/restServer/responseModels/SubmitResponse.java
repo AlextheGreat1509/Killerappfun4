@@ -1,23 +1,25 @@
 package restServer.responseModels;
 
+import java.util.List;
+
 public class SubmitResponse {
 
-    private String problem;
-    private String solution;
+    private List<String> problemWords;
+    private List<String> translationWords;
 
-    public String getProblem() {
-        return problem;
+    public List<String> getProblemWords() {
+        return problemWords;
     }
 
-    public void setProblem(String problem) {
-        this.problem = problem;
+    public void setProblemWords(List<String> dutchWords) {
+        this.problemWords = dutchWords;
     }
 
-    public String getSolution() {
-        return solution;
+    public List<String> getTranslationWords() {
+        return translationWords;
     }
 
-    public void setSolution(String solution) {
-        this.solution = solution;
+    public void setTranslationWords(List<String> translationWords) {
+        this.translationWords = translationWords;
     }
 }

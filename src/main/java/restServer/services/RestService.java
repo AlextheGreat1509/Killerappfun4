@@ -21,18 +21,17 @@ import javax.ws.rs.core.*;
             Gson gson = new Gson();
             Reply reply = null;
             SubmitResponse submitResponse = gson.fromJson(data, SubmitResponse.class);
-            listHandler.SubmitEntry(submitResponse.getProblem(), submitResponse.getSolution());
+            listHandler.SubmitEntry(submitResponse.getProblemWords(), submitResponse.getTranslationWords());
             reply = new Reply(Status.OK, true);
             return Response.status(reply.getStatus().getCode())
                     .entity(reply.getMessage()).build();
         }
 
         @GET
-        @Consumes(MediaType.TEXT_PLAIN)
-        @Path("/get")
-        public Response findList(@DefaultValue("") @QueryParam("equation") String equation, @Context UriInfo uriInfo){
+        @Path("/getlists")
+        public Response findLists(){
 
-            Reply reply = null;
+            Reply reply = new Reply(Status.OK, listHandler.GetLists());
             return Response.status(reply.getStatus().getCode())
                     .entity(reply.getMessage()).build();
         }
