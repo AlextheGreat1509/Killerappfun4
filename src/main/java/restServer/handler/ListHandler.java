@@ -4,6 +4,7 @@ import dbal.repository.WordListRepository;
 import dbal.repository.WordEntryRepository;
 import models.WordList;
 import models.WordEntry;
+import org.hibernate.Criteria;
 import org.hibernate.Session;
 import restServer.reply.Reply;
 import restServer.reply.Status;
@@ -17,7 +18,7 @@ public class ListHandler {
     private WordListRepository wordListRepository = new WordListRepository();
     private WordEntryRepository wordEntryRepository = new WordEntryRepository();
 
-    public void SubmitEntry(List<String> problemWords, List<String> translationWords) {
+    public void SubmitEntry(List<String> problemWords, List<String> translationWords, String title) {
 
         WordList wordList = new WordList();
         List<WordEntry> listEntries = new ArrayList<>();
@@ -30,6 +31,7 @@ public class ListHandler {
             }
         }
         wordList.setListEntries(listEntries);
+        wordList.setTitle(title);
 
         for (WordEntry entry: listEntries) {
             wordEntryRepository.save(entry);
@@ -39,12 +41,16 @@ public class ListHandler {
 
     public List<WordList> GetLists() {
         Session session = wordListRepository.openSession();
-        List queryResult = session.createCriteria(WordList.class).list();
+        List queryResult = session.createCriteria(WordList.class).setResultTransformer(Criteria.DISTINCT_ROOT_ENTITY).list();
         ArrayList<WordList> resultList = new ArrayList<>();
         for (Object result : queryResult) {
             WordList wordList = (WordList) result;
             resultList.add(wordList);
         }
         return resultList;
+    }
+
+    public WordList GetListById(int id) {
+        return wordListRepository.findOne(id);
     }
 }
