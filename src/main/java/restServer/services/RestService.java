@@ -21,7 +21,7 @@ import javax.ws.rs.core.*;
             Gson gson = new Gson();
             Reply reply = null;
             SubmitResponse submitResponse = gson.fromJson(data, SubmitResponse.class);
-            listHandler.SubmitEntry(submitResponse.getProblemWords(), submitResponse.getTranslationWords(), submitResponse.getTitle());
+            listHandler.SubmitEntry(submitResponse.getProblemWords(), submitResponse.getTranslationWords(), submitResponse.getTitle(), submitResponse.getProblemLanguage(), submitResponse.getTranslationLanguage());
             reply = new Reply(Status.OK, true);
             return Response.status(reply.getStatus().getCode())
                     .entity(reply.getMessage()).build();

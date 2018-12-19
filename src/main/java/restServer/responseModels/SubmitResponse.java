@@ -7,6 +7,8 @@ public class SubmitResponse {
     private List<String> problemWords;
     private List<String> translationWords;
     private String title;
+    private String problemLanguage;
+    private String translationLanguage;
 
     public List<String> getProblemWords() {
         return problemWords;
@@ -30,5 +32,21 @@ public class SubmitResponse {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public String getProblemLanguage() {
+        return problemLanguage;
+    }
+
+    public void setProblemLanguage(String problemLanguage) {
+        this.problemLanguage = problemLanguage;
+    }
+
+    public String getTranslationLanguage() {
+        return translationLanguage;
+    }
+
+    public void setTranslationLanguage(String translationLanguage) {
+        this.translationLanguage = translationLanguage;
     }
 }

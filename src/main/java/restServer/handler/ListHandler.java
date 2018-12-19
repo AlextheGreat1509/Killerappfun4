@@ -18,7 +18,7 @@ public class ListHandler {
     private WordListRepository wordListRepository = new WordListRepository();
     private WordEntryRepository wordEntryRepository = new WordEntryRepository();
 
-    public void SubmitEntry(List<String> problemWords, List<String> translationWords, String title) {
+    public void SubmitEntry(List<String> problemWords, List<String> translationWords, String title, String problemLanguage, String translationLanguage) {
 
         WordList wordList = new WordList();
         List<WordEntry> listEntries = new ArrayList<>();
@@ -32,6 +32,8 @@ public class ListHandler {
         }
         wordList.setListEntries(listEntries);
         wordList.setTitle(title);
+        wordList.setProblemLanguage(problemLanguage);
+        wordList.setTranslationLanguage(translationLanguage);
 
         for (WordEntry entry: listEntries) {
             wordEntryRepository.save(entry);

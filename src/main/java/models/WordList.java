@@ -18,6 +18,12 @@ public class WordList {
     @NotNull
     private String title;
 
+    @NotNull
+    private String problemLanguage;
+
+    @NotNull
+    private String translationLanguage;
+
     public List<WordEntry> getListEntries() {
         return listEntries;
     }
@@ -40,5 +46,21 @@ public class WordList {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public String getProblemLanguage() {
+        return problemLanguage;
+    }
+
+    public void setProblemLanguage(String problemLanguage) {
+        this.problemLanguage = problemLanguage;
+    }
+
+    public String getTranslationLanguage() {
+        return translationLanguage;
+    }
+
+    public void setTranslationLanguage(String translationLanguage) {
+        this.translationLanguage = translationLanguage;
     }
 }
