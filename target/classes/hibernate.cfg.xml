@@ -36,7 +36,7 @@
         <!-- The mapping information of entities -->
         <mapping class="models.WordList"/>
         <mapping class="models.WordEntry"/>
-
+        <mapping class="models.Person"/>
 
 
 

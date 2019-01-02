@@ -24,6 +24,22 @@ public class WordList {
     @NotNull
     private String translationLanguage;
 
+    public String getProblemLanguage() {
+        return problemLanguage;
+    }
+
+    public void setProblemLanguage(String problemLanguage) {
+        this.problemLanguage = problemLanguage;
+    }
+
+    public String getTranslationLanguage() {
+        return translationLanguage;
+    }
+
+    public void setTranslationLanguage(String translationLanguage) {
+        this.translationLanguage = translationLanguage;
+    }
+
     public List<WordEntry> getListEntries() {
         return listEntries;
     }
@@ -48,19 +64,4 @@ public class WordList {
         this.title = title;
     }
 
-    public String getProblemLanguage() {
-        return problemLanguage;
-    }
-
-    public void setProblemLanguage(String problemLanguage) {
-        this.problemLanguage = problemLanguage;
-    }
-
-    public String getTranslationLanguage() {
-        return translationLanguage;
-    }
-
-    public void setTranslationLanguage(String translationLanguage) {
-        this.translationLanguage = translationLanguage;
-    }
 }
