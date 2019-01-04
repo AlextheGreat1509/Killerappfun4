@@ -1,13 +1,17 @@
 package restServer.handler;
 
 import dbal.repository.PersonRepository;
+import dbal.repository.ResultRepository;
 import dbal.repository.WordListRepository;
 import dbal.repository.WordEntryRepository;
 import models.Person;
+import models.Result;
 import models.WordList;
 import models.WordEntry;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
+import org.hibernate.criterion.Restrictions;
+import restServer.request.RequestResult;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,8 +21,9 @@ public class ListHandler {
     private WordListRepository wordListRepository = new WordListRepository();
     private WordEntryRepository wordEntryRepository = new WordEntryRepository();
     private PersonRepository personRepository = new PersonRepository();
+    private ResultRepository resultRepository = new ResultRepository();
 
-    public void SubmitEntry(List<String> problemWords, List<String> translationWords, String title, String problemLanguage, String translationLanguage, String personName) {
+    public void SubmitEntry(List<String> problemWords, List<String> translationWords, String title, String problemLanguage, String translationLanguage, String personEmail) {
 
         WordList wordList = new WordList();
         List<WordEntry> listEntries = new ArrayList<>();
@@ -34,8 +39,10 @@ public class ListHandler {
         wordList.setTitle(title);
 
         Person person = new Person();
-        person.setName(personName);
-        person.setWordList(wordList);
+        person.setEmail(personEmail.toLowerCase());
+        List<WordList> wordLists = new ArrayList<>();
+        wordLists.add(wordList);
+        person.setWordList(wordLists);
 
         wordList.setProblemLanguage(problemLanguage);
         wordList.setTranslationLanguage(translationLanguage);
@@ -61,5 +68,46 @@ public class ListHandler {
 
     public WordList GetListById(int id) {
         return wordListRepository.findOne(id);
+    }
+
+    public List<WordList> GetListsByEmail(String email) {
+        Session session = personRepository.openSession();
+        Criteria query = session.createCriteria(Person.class);
+        query.add(Restrictions.eq("email", email));
+        Person person = (Person) query.uniqueResult();
+        return person.getWordList();
+    }
+
+    public void SubmitResultEntry(int wordListId, int score, int total, String email) {
+        Result result = new Result();
+        result.setScore(score);
+        result.setTotal(total);
+        result.setWordListId(wordListId);
+
+        Session session = personRepository.openSession();
+        Criteria query = session.createCriteria(Person.class);
+        query.add(Restrictions.eq("email", email.toLowerCase()));
+        Person person = (Person) query.uniqueResult();
+        person.addResult(result);
+
+        resultRepository.save(result);
+        personRepository.save(person);
+    }
+
+    public List<RequestResult> GetResultsByEmail(String email) {
+        Session session = personRepository.openSession();
+        Criteria query = session.createCriteria(Person.class);
+        query.add(Restrictions.eq("email", email.toLowerCase()));
+        Person person = (Person) query.uniqueResult();
+        List<RequestResult> requestResults = new ArrayList<>();
+
+        for (Result result : person.getResultList()){
+            RequestResult requestResult = new RequestResult();
+            requestResult.setScore(result.getScore());
+            requestResult.setTotal(result.getTotal());
+            requestResult.setTitle(wordListRepository.findOne(result.getWordListId()).getTitle());
+            requestResults.add(requestResult);
+        }
+        return requestResults;
     }
 }

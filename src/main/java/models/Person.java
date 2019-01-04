@@ -13,11 +13,16 @@ public class Person {
     @Column(name = "Person_ID", unique = true, nullable = false)
     int id;
 
-    @OneToOne
-    private WordList wordList;
+    @OneToMany(cascade = {CascadeType.ALL, CascadeType.MERGE, CascadeType.PERSIST}, fetch=FetchType.LAZY)
+    private List<WordList> wordList;
+
+    @OneToMany(cascade = {CascadeType.ALL, CascadeType.MERGE, CascadeType.PERSIST}, fetch=FetchType.LAZY)
+    private List<Result> resultList;
+
+    private String name;
 
     @NotNull
-    private String name;
+    private String email;
 
     public String getName() {
         return name;
@@ -31,11 +36,31 @@ public class Person {
         return id;
     }
 
-    public WordList getWordList() {
+    public List<WordList> getWordList() {
         return wordList;
     }
 
-    public void setWordList(WordList wordList) {
+    public void setWordList(List<WordList> wordList) {
         this.wordList = wordList;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public List<Result> getResultList() {
+        return resultList;
+    }
+
+    public void setResultList(List<Result> resultList) {
+        this.resultList = resultList;
+    }
+
+    public void addResult(Result result) {
+        this.resultList.add(result);
     }
 }

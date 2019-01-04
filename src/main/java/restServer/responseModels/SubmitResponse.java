@@ -9,7 +9,7 @@ public class SubmitResponse {
     private String title;
     private String problemLanguage;
     private String translationLanguage;
-    private String person;
+    private String personEmail;
 
     public List<String> getProblemWords() {
         return problemWords;
@@ -51,11 +51,11 @@ public class SubmitResponse {
         this.translationLanguage = translationLanguage;
     }
 
-    public String getPerson() {
-        return person;
+    public String getPersonEmail() {
+        return personEmail;
     }
 
-    public void setPerson(String person) {
-        this.person = person;
+    public void setPersonEmail(String personEmail) {
+        this.personEmail = personEmail;
     }
 }
