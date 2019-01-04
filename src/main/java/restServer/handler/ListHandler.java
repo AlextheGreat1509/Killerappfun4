@@ -10,6 +10,7 @@ import models.WordList;
 import models.WordEntry;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
+import org.hibernate.Transaction;
 import org.hibernate.criterion.Restrictions;
 import restServer.request.RequestResult;
 
@@ -40,9 +41,7 @@ public class ListHandler {
 
         Person person = new Person();
         person.setEmail(personEmail.toLowerCase());
-        List<WordList> wordLists = new ArrayList<>();
-        wordLists.add(wordList);
-        person.setWordList(wordLists);
+        person.addWordList(wordList);
 
         wordList.setProblemLanguage(problemLanguage);
         wordList.setTranslationLanguage(translationLanguage);
@@ -83,15 +82,19 @@ public class ListHandler {
         result.setScore(score);
         result.setTotal(total);
         result.setWordListId(wordListId);
+        resultRepository.save(result);
 
         Session session = personRepository.openSession();
+        Transaction tx = session.beginTransaction();
         Criteria query = session.createCriteria(Person.class);
         query.add(Restrictions.eq("email", email.toLowerCase()));
         Person person = (Person) query.uniqueResult();
-        person.addResult(result);
+        List<Result> results = person.getResultList();
+        results.add(result);
+        person.setResultList(results);
+        tx.commit();
+        session.close();
 
-        resultRepository.save(result);
-        personRepository.save(person);
     }
 
     public List<RequestResult> GetResultsByEmail(String email) {

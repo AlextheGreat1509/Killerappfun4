@@ -2,6 +2,7 @@ package models;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -14,10 +15,10 @@ public class Person {
     int id;
 
     @OneToMany(cascade = {CascadeType.ALL, CascadeType.MERGE, CascadeType.PERSIST}, fetch=FetchType.LAZY)
-    private List<WordList> wordList;
+    private List<WordList> wordList = new ArrayList<>();
 
     @OneToMany(cascade = {CascadeType.ALL, CascadeType.MERGE, CascadeType.PERSIST}, fetch=FetchType.LAZY)
-    private List<Result> resultList;
+    private List<Result> resultList = new ArrayList<>();
 
     private String name;
 
@@ -42,6 +43,10 @@ public class Person {
 
     public void setWordList(List<WordList> wordList) {
         this.wordList = wordList;
+    }
+
+    public void addWordList(WordList wordList) {
+        this.wordList.add(wordList);
     }
 
     public String getEmail() {
