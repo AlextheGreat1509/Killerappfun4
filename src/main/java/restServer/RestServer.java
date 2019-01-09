@@ -18,7 +18,7 @@ public class RestServer {
                 ServletContextHandler(ServletContextHandler.SESSIONS);
         context.setContextPath("/");
         Server jettyServer;
-        if (args.length > 1) {
+        if (args.length >= 1) {
             jettyServer = new Server(Integer.parseInt(args[0]));
         } else {
             jettyServer = new Server(8090);
@@ -29,7 +29,7 @@ public class RestServer {
         cors.setInitParameter(CrossOriginFilter.ALLOWED_ORIGINS_PARAM, "*");
         cors.setInitParameter(CrossOriginFilter.ACCESS_CONTROL_ALLOW_ORIGIN_HEADER, "*");
         cors.setInitParameter(CrossOriginFilter.ALLOWED_METHODS_PARAM, "GET,POST,HEAD,OPTIONS");
-        cors.setInitParameter(CrossOriginFilter.ALLOWED_HEADERS_PARAM, "X-Requested-With,Content-Type,Accept,Origin,Authorization,XMLHttpRequest");
+        cors.setInitParameter(CrossOriginFilter.ALLOWED_HEADERS_PARAM, "X-Requested-With,Content-Type,Accept,Origin,Authorization");
         //endregion
 
         jettyServer.setHandler(context);
