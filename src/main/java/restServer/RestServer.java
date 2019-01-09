@@ -17,7 +17,12 @@ public class RestServer {
         ServletContextHandler context = new
                 ServletContextHandler(ServletContextHandler.SESSIONS);
         context.setContextPath("/");
-        Server jettyServer = new Server(Integer.parseInt(args[0]));
+        Server jettyServer;
+        if (args.length > 1) {
+            jettyServer = new Server(Integer.parseInt(args[0]));
+        } else {
+            jettyServer = new Server(8090);
+        }
 
         //region Origin header
         FilterHolder cors = context.addFilter(CrossOriginFilter.class, "/*", EnumSet.of(DispatcherType.REQUEST));
