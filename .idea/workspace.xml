@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="097d5544-64c6-4ebb-be88-6c0ff9890a38" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/repository/AbstractRepoTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/repository/WordEntryRepoTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -85,7 +83,7 @@
           <entry key="wordlist_wordentry" value="6" />
           <entry key="wordlistlanguage" value="1" />
           <entry key="wordlistlanguage_wordlist" value="1" />
-          <entry key="xml" value="8" />
+          <entry key="xml" value="9" />
           <entry key="yml" value="1" />
         </counts>
       </usages-collector>
@@ -95,7 +93,7 @@
           <entry key="Database Element" value="33" />
           <entry key="JAVA" value="67" />
           <entry key="Properties" value="1" />
-          <entry key="XML" value="8" />
+          <entry key="XML" value="9" />
           <entry key="YAML" value="1" />
         </counts>
       </usages-collector>
@@ -103,16 +101,16 @@
         <counts>
           <entry key="dummy" value="93" />
           <entry key="java" value="4282" />
-          <entry key="txt" value="148" />
-          <entry key="xml" value="68" />
+          <entry key="txt" value="205" />
+          <entry key="xml" value="74" />
           <entry key="yml" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="4282" />
-          <entry key="PLAIN_TEXT" value="241" />
-          <entry key="XML" value="68" />
+          <entry key="PLAIN_TEXT" value="298" />
+          <entry key="XML" value="74" />
           <entry key="YAML" value="10" />
         </counts>
       </usages-collector>
@@ -151,7 +149,7 @@
         <entry file="file://$PROJECT_DIR$/src/test/java/repository/WordEntryRepoTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="232">
-              <caret line="45" column="34" lean-forward="true" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="34" />
+              <caret line="45" column="34" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -169,22 +167,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="das://78307e0c-889c-4c75-bd85-8af9fe5b90fb/database/equationsolver/schema/dbo/table/wordlist_wordentry">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-              <column-attributes>
-                <column name="%%physloc%%" enabled="false" />
-              </column-attributes>
+        <entry file="file://$PROJECT_DIR$/src/main/java/restServer/services/RestService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="867">
+              <caret line="66" selection-start-line="66" selection-end-line="66" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/restServer/services/RestService.java">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="867">
-              <caret line="66" selection-start-line="66" selection-end-line="66" />
+            <state relative-caret-position="187">
+              <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -261,7 +256,6 @@
         <option value="$PROJECT_DIR$/src/test/java/models/EntryListTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/models/EntryList.java" />
         <option value="$PROJECT_DIR$/src/main/java/restServer/responseModels/SubmitListResponse.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/models/WordEntry.java" />
         <option value="$PROJECT_DIR$/src/main/java/dbal/repository/WordListLanguage.java" />
         <option value="$PROJECT_DIR$/src/main/java/models/WordListLanguage.java" />
@@ -283,6 +277,7 @@
         <option value="$PROJECT_DIR$/src/test/java/repotests/AbstractRepoTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/repository/AbstractRepoTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/repository/WordEntryRepoTest.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -486,7 +481,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547025420307" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547025772939" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -597,7 +592,7 @@
       <workItem from="1546506025471" duration="1000000" />
       <workItem from="1546591377519" duration="10295000" />
       <workItem from="1546681771783" duration="150000" />
-      <workItem from="1547021538894" duration="955000" />
+      <workItem from="1547021538894" duration="1236000" />
     </task>
     <task id="LOCAL-00001" summary="Travis added">
       <created>1543395277535</created>
@@ -662,7 +657,14 @@
       <option name="project" value="LOCAL" />
       <updated>1546604596963</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Added database test and changed application version">
+      <created>1547025581453</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1547025581453</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -698,7 +700,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52046000" />
+    <option name="totallyTimeSpent" value="52327000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -732,7 +734,7 @@
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="right" id="Maven Projects" order="5" />
-      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.3295302" />
+      <window_info anchor="right" id="Database" order="6" weight="0.3295302" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info anchor="right" id="Bean Validation" order="9" />
@@ -751,7 +753,8 @@
     <MESSAGE value="Added language settings for the lists" />
     <MESSAGE value="Added person for extra relations" />
     <MESSAGE value="Added results" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added results" />
+    <MESSAGE value="Added database test and changed application version" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added database test and changed application version" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -769,13 +772,6 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/restServer/responseModels/SubmitListResponse.java" />
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="128" column="21" selection-start-line="128" selection-start-column="21" selection-end-line="128" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/glassfish/jersey/core/jersey-server/2.7/jersey-server-2.7.jar!/org/glassfish/jersey/server/model/internal/AbstractJavaResourceMethodDispatcher.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="282">
@@ -962,17 +958,10 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/repository/WordEntryRepoTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="232">
-          <caret line="45" column="34" lean-forward="true" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="34" />
+          <caret line="45" column="34" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://78307e0c-889c-4c75-bd85-8af9fe5b90fb/database/equationsolver/schema/dbo/table/wordentry">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -1004,6 +993,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="867">
           <caret line="66" selection-start-line="66" selection-end-line="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://78307e0c-889c-4c75-bd85-8af9fe5b90fb/database/equationsolver/schema/dbo/table/wordlist_wordentry">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+          <column-attributes>
+            <column name="%%physloc%%" enabled="false" />
+          </column-attributes>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://78307e0c-889c-4c75-bd85-8af9fe5b90fb/database/equationsolver/schema/dbo/table/wordentry">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
         </state>
       </provider>
     </entry>
